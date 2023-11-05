@@ -57,6 +57,66 @@
         //console.log(ArrayContactos);
         console.log("Primer Contacto: " + ArrayContactos[0].nombre +  " --- " + ArrayContactos[0].telefono + " --- " + ArrayContactos[0].correo + " --- " + ArrayContactos[0].correo.length );
         console.log("Ultimo Contacto: " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " --- " + ArrayContactos[ArrayContactos.length - 1].correo.length );
+
+        /* ////////////// Estamos trabajando desde la rama de:                      */
+        //                                                   ----> tareaContinua_3
+        console.log("////////////////////////////////////////////////////////--ejericio 3--///////////");
+
+        let nombreAux;
+        let telefonoAux;
+        let correoAux;
+
+        function insertarNombre(){
+            let entrada;
+            while(true){
+                entrada = prompt("Introduce un nombre");
+                if((entrada !== "") && (entrada !== null)){
+                    return entrada;
+                }else{
+                    alert("nombre no valido");
+                }
+            }
+        }
+        nombreAux = insertarNombre();
+        //console.log(nombre);
+        function insertarTelefono(){
+            let entrada;
+            while(true){
+                entrada = prompt("Introduce tu numero de telefono");
+                if((entrada !== "") && (entrada !== null)){
+                    if((!isNaN(parseInt(entrada))) && (entrada.length >= 9) && (entrada.length <= 20)){
+                        return entrada;
+                    }else{
+                        alert("numero de telefono no valido por logitud o porque no es un numero");
+                    }
+                }else{
+                    alert("numero de telefono no valido");
+                }
+            }
+        }
+        telefonoAux = insertarTelefono();
+        console.log(telefonoAux);
+        function insertarCorreo(){
+            let entrada;
+            while(true){
+                entrada = prompt("Introduce un correo electronico");
+                if((entrada !== "") && (entrada !== null)){
+                    return entrada;
+                }else{
+                    alert("correo electronico no valido");
+                }
+            }
+        }
+        correoAux = insertarCorreo();
+        let contacto__5 = {
+            nombre:nombreAux,
+            telefono:telefonoAux,
+            correo:correoAux
+        }
+        ArrayContactos.push(contacto__5);
+        console.log("Primer Contacto: " + ArrayContactos[0].nombre +  " --- " + ArrayContactos[0].telefono + " --- " + ArrayContactos[0].correo + " --- " + ArrayContactos[0].correo.length );
+        console.log("Ultimo Contacto: " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " --- " + ArrayContactos[ArrayContactos.length - 1].correo.length );
+        
     </script>
 </body>
 </html>
