@@ -29,6 +29,34 @@
 
         /* ////////////// Estamos trabajando desde la rama de: */
         //                                                   ----> tareaContinua_2
+        console.log("////////////////////////////////////////////////////////--ejericio 2--///////////");
+        //let ArrayContactos = [[nombre01,telefono01,correo01],[nombre02,telefono02,correo02],[nombre03,telefono02,correo03]];
+        let contacto__1 = {
+            nombre:nombre01,
+            telefono:telefono01,
+            correo:correo01
+        }
+        let contacto__2 = {
+            nombre:nombre02,
+            telefono:telefono02,
+            correo:correo02
+        }
+        let contacto__3 = {
+            nombre:nombre03,
+            telefono:telefono03,
+            correo:correo03
+        }
+        let ArrayContactos = [contacto__1,contacto__2,contacto__3];
+        //console.log(ArrayContactos);
+        let contacto__4 = {
+            nombre:"Maisie Haley",
+            telefono:"0913 531 3030",
+            correo:"risus.quisque@urna.ca"
+        }
+        ArrayContactos.push(contacto__4);
+        //console.log(ArrayContactos);
+        console.log("Primer Contacto: " + ArrayContactos[0].nombre +  " --- " + ArrayContactos[0].telefono + " --- " + ArrayContactos[0].correo + " --- " + ArrayContactos[0].correo.length );
+        console.log("Ultimo Contacto: " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " --- " + ArrayContactos[ArrayContactos.length - 1].correo.length );
     </script>
 </body>
 </html>
