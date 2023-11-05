@@ -117,6 +117,53 @@
         console.log("Primer Contacto: " + ArrayContactos[0].nombre +  " --- " + ArrayContactos[0].telefono + " --- " + ArrayContactos[0].correo + " --- " + ArrayContactos[0].correo.length );
         console.log("Ultimo Contacto: " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " --- " + ArrayContactos[ArrayContactos.length - 1].correo.length );
         
+        /* ////////////// Estamos trabajando desde la rama de:                      */
+        //                                                   ----> tareaContinua_4
+        console.log("////////////////////////////////////////////////////////--ejericio 4--///////////");
+        alert("Ejercicio 4");
+
+        function insertarContacto(nombreAux,telefonoAux,correoAux){
+            let contactoAInsertar = {
+                nombre:nombreAux,
+                telefono:telefonoAux,
+                correo:correoAux
+            }
+            ArrayContactos.push(contactoAInsertar);
+            alert("contacto " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " insertado correctamente");
+        }
+
+        let ejecucion = true;
+        while(ejecucion){
+            alert(`OPCIONES:
+            "show first" - "show last" - "insert new" - "exit"
+            `);
+            entrada = prompt("¿que quieres hacer?");
+            switch(entrada){
+                case 'show first':
+                    alert("Primer Contacto: " + ArrayContactos[0].nombre +  " --- " + ArrayContactos[0].telefono + " --- " + ArrayContactos[0].correo + " --- " + ArrayContactos[0].correo.length );
+                    break;
+                case 'show last':
+                    alert("Ultimo Contacto: " + ArrayContactos[ArrayContactos.length - 1].nombre +  " --- " + ArrayContactos[ArrayContactos.length - 1].telefono + " --- " + ArrayContactos[ArrayContactos.length - 1].correo + " --- " + ArrayContactos[ArrayContactos.length - 1].correo.length);
+                    break;
+                case 'insert new':
+
+                    nombreAux = insertarNombre();
+                    telefonoAux = insertarTelefono();
+                    correoAux = insertarCorreo();
+                    insertarContacto(nombreAux,telefonoAux,correoAux);
+                    
+                    break;
+                case 'exit':
+                    alert("Hasta pronto");
+                    ejecucion = false;
+                    break;
+                default:
+                    alert("dafult mode, nothing happened")
+                    break;
+            }
+        }
+
+
     </script>
 </body>
 </html>
